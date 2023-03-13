@@ -1,0 +1,311 @@
+/* 
+
+CONTENTS 
+1. General Styling
+2. Fonts
+3. Navigation/Header and Footer
+4. Section Specific Styles
+5. Pseudo Elements
+6. Animations
+7. Media Queries
+
+*/
+
+/* --- 1. General Styling --- */
+
+html {
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+  }
+    
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  section {
+    margin: 0 auto;
+    padding: 10% 17.5%; /* main container width set by the % */
+    min-height: 100vh;
+    overflow: auto; /* section adjusts to content's height */
+  }
+
+  section:first-child {
+    min-height: calc(100vh - 100px); /* means first section height isn't increased by navbar - very sexy */
+  }
+  
+/* --- 2. Fonts --- */
+  
+  /* default */
+  body {
+    font-family: 'neue_haas_grotesk_display65Md', 'Manrope', sans-serif;
+  }
+
+  /* headings */
+  h1 {
+    text-align: center;
+    color:#FE4632;
+    z-index: 1;
+    margin-top: -100px; /* means nav doesn't affect vertical centering of h1 */
+  }
+
+
+  h1, 
+  h2 {
+    font-size: 4em;
+    font-weight: 400;
+  }
+
+  .who h2 {
+    font-size: 3em;
+  }
+
+  .show-container h2 {
+    color: #F2F2EF;
+  } 
+
+  .gallery-container h2, 
+  .gallery-container h3 {
+    font-weight: 400;
+  }
+  
+  .gallery-container h2 {
+    font-size: 6em;
+    color: #419901;
+  }
+  
+  .gallery-container h3 {
+    font-size: 4em;
+  }
+  
+  h3 {
+    font-size: 2.5em;
+  }
+
+  .bluetext, 
+  .interests-small-screen h2, 
+  .interests-small-screen h4 {
+    color: #FA5B52;
+  }
+
+  h4 {
+    font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+    font-size: 1.5em;
+    color: #F2F2EF;
+  }
+
+  /* links and main paragraph */
+  p, 
+  .who a {
+    font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+    color: #1A1A1A;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: 700;
+    color: #ECB08C;
+    font-size: 1.7em;
+  }
+
+  .who a, 
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .who a {
+    font-weight: 400;}
+
+  .gallery-container a {
+    text-decoration: none;
+    color: #0E2724;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  
+  .gallery-container a:hover, 
+  .gallery-container a:active {
+    text-decoration: underline;
+  }
+
+  /* paragraphs */
+  .who p, 
+  .founders p {
+    text-align: justify;
+  }
+
+  .hide p {
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  .gallery-container p {
+    font-size: 1.5em;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+  }
+  
+  figcaption p, 
+  .captionHide {
+    font-size: 1em;
+    font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+  }
+
+  /* decorative */
+  .line-through {
+    text-decoration: line-through;
+  }
+
+/* --- 3. Navigation/Header and Footer --- */
+
+  .nav-container, 
+  .footer-container {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 100px;
+    padding: 0px 50px;
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    z-index: 100;
+  }
+
+  .nav-container li, 
+  .footer-container li {
+    margin: auto 0; 
+    z-index: 100;
+  }
+
+  .nav-container li:first-child {
+    flex-grow: 2;
+  }
+
+/* --- 4. Section Specific Styles --- */
+
+  /* Project Gallery Section */
+  .project-gallery {
+    background-color: #FA5B52;
+  }
+
+
+  .gallery-container {
+    padding: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 25px; /* row then column gap */
+  }
+
+  .flex-item {
+    width: 250px;
+    flex-grow: 1;
+  }
+
+  .flex-item img {
+    display: block; /* removes the random pixels of white space under img */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 15px;
+    border: solid 3px #fff;
+    width: 100%;
+    filter: grayscale(100);
+    /* filter: drop-shadow(4px 4px 4px #DAEDD8); */
+  }
+
+  .flex-item img:hover {
+    /* filter: opacity(100%) drop-shadow(4px 4px 4px #DAEDD8); */
+    filter: none;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  figcaption p, 
+  .captionHide {
+    margin: 0;
+  }
+
+  .captionHide {
+    padding: 0 20px;
+  } 
+
+  .plus-symbol {
+    font-size: 3em;
+    line-height: 0;
+    color: #F2F2EF;
+    cursor:pointer;
+    border: none;
+    padding: 5px 5px; /* to increase clickable area */
+    background-color: inherit;
+  }
+
+  figcaption div:first-child {
+    flex-grow: 1;
+  }
+
+  .plus-symbol:hover {
+    color: #DC2F0A;
+    transition: 0.3s;
+  }
+
+ 
+
+
+/* --- 7. Media Queries --- */
+
+  @media all and (max-width: 1200px) {  
+    .nav-container li:first-child {
+      display: none;
+    }
+      
+    .nav-container, 
+    .footer-container {
+      justify-content: flex-end;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: auto;
+      gap: 20px;
+      padding: 30px 0;
+      text-align: center;
+    }
+  }
+
+  @media all and (max-width: 750px) {
+    section {
+      padding: 7%;
+    }
+  }
+
+  @media all and (max-width: 660px) {
+    a {
+      font-family: 'neue_haas_grotesk_display45Lt', 'Manrope', sans-serif;
+    }
+
+    h2 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .plus-symbol {
+      font-size: 2em;
+  }
+
+}
