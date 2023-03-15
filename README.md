@@ -3,9 +3,6 @@
 
 ## Table of Contents
 1. [Planning](#Planning) 
-  a. [Colour Palettes](#colour-palettes)  
-  b. [Figma Design](#original-figma-design) 
-
 2. [Building](#Building)  
 3. [Debugging](#Debugging)
 
@@ -16,6 +13,9 @@ I wanted the project gallery to tie in with the main website but be a seperate p
 ### Original Figma Design:
 
 ![Original Website design](images/figma_design.png)
+
+### Reworked Design (not on Figma):
+After the site was built I decided I wanted to move away from the same style as the main website as I felt like it was an oppportunity to play with different colours, I played with code and made a new design:
 ![Next Website design](images/old_design.png)
 
 ## Building
@@ -38,5 +38,4 @@ I wanted the project gallery to tie in with the main website but be a seperate p
 ```css
   
 ```
-
 
