@@ -33,7 +33,7 @@ After these redesigns I ended up deciding that I wanted the gallery to be part o
 ## Debugging
 
 ### Issue: Getting the dropdown button to loop through all the individual cards.
-This was my first real experience of using JavaScript and I got really stuck trying to figure out how to access each of the captions individually, and link them to their parent. I found out how to access the first caption and it's dropdown but couldn't work out how to access any of the others. I hadn't clocked that my captions couldn't be an id (as multiple of them), and also that I needed to use a loop.
+This was my first real experience of using JavaScript and I got really stuck trying to figure out how to access each of the captions individually, and how to link them to their respective dropdown button. I found out how to access the first caption and it's dropdown but couldn't work out how to access any of the others. I hadn't clocked that my captions couldn't be an id (as multiple of them), and also that I needed to use a loop.
 
 **Original code:**
 ```javascript
@@ -67,13 +67,8 @@ The if clause from my original code is then applied, and voila, it works! I was 
       }
       
     });
-    } 
+    }
+    
 ```
-### Issue: Getting the gallery section height to not be increased by the navbar.
 
-**Solution:**  
-```css
- section:first-child {
-    min-height: calc(100vh - 100px); /* means first section height isn't increased by navbar - very sexy */
-  }
-```
+
