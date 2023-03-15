@@ -1,5 +1,5 @@
 
-# Application Website
+# Project Gallery
 
 ## Table of Contents
 1. [Planning](#Planning) 
