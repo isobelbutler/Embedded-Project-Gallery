@@ -33,18 +33,41 @@ After these redesigns I ended up deciding that I wanted the gallery to be part o
 ## Debugging
 
 ### Issue: Getting the dropdown button to loop through all the individual cards.
-This was my first real experience of using JavaScript 
+This was my first real experience of using JavaScript and I got really stuck trying to figure out how to access each of the captions individually, and link them to their parent. I found out how to access the first caption and it's dropdown but couldn't work out how to access any of the others. I hadn't clocked that my captions couldn't be an id (as multiple of them), and also that I needed to use a loop.
 
 **Original code:**
-```html
-
+```javascript
+function myFunction() {
+    var x = document.getElementById("captionHide");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 ```
 
 **Solution:**  
+I learnt about loops, query selectors, and how to access items within an object. This took me a little while as I wasn't familiar with any of these concepts before starting the project.
 
+After lots of research online I managed to create the solution below. Here, a loop runs 8 times *(8 = gallery.length)*, the first symbol gets an 'click' event handler attached to it, which runs an anonymous function. In this function *var x* is the individual captions. Because I used *i* again, the index of both the plus-symbol and the caption are the same, meaning clicking the first plus symbol displays the first caption etc.
 
-```css
-  
+The if clause from my original code is then applied, and voila, it works! I was really pleased when I got this to work as I spent a long time staring at my code and scratching my head!
+
+```javascript
+  for (let i = 0; i < gallery.length; i++) {
+    
+    document.querySelectorAll(".plus-symbol")[i].addEventListener("click", function() {
+    
+      var x = document.querySelectorAll(".captionHide")[i]; // By using querySelectorAll and captionHide as a class, you can select which index number to affect.
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+      
+    });
+    } 
 ```
 ### Issue: Getting the gallery section height to not be increased by the navbar.
 
