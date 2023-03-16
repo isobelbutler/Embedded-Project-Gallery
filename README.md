@@ -1,5 +1,5 @@
 
-# Application Website
+# Project Gallery
 
 ## Table of Contents
 1. [Planning](#Planning) 
@@ -8,14 +8,14 @@
 
 ## Planning
 
-I wanted the project gallery to tie in with the main website but be a seperate page. I started by using the same colour palette and navbar as the application website and created a figma design that used alot of the strong red as the website, as shown below:
+I wanted the project gallery to tie in with the main website but be a separate page. I started by using the same colour palette and navbar as the application website and created a Figma design that used a lot of the strong red as the website, as shown below:
 
 ### Original Figma Design:
 
 ![Original Website design](images/figma_design.png)
 
 ### Reworked Design (not on Figma):
-After the site was built I decided I wanted to move away from the same style as the main website as I felt like it was an oppportunity to play with different colour so I made a new design:  
+After building the site, I decided to move away from the same style as the main website as it felt like an opportunity to play with different colour so I made a new design:  
 
 ![Next Website design](images/old_design.png)
 
@@ -33,7 +33,7 @@ After these redesigns I ended up deciding that I wanted the gallery to be part o
 ## Debugging
 
 ### Issue: Getting the dropdown button to loop through all the individual cards.
-This was my first real experience of using JavaScript and I got really stuck trying to figure out how to access each of the captions individually, and how to link them to their respective dropdown button. I found out how to access the first caption and it's dropdown but couldn't work out how to access any of the others. I hadn't clocked that my captions couldn't be an id (as multiple of them), and also that I needed to use a loop.
+This was my first real experience of using JavaScript and I got really stuck trying to figure out how to access each of the captions individually, and how to link them to their respective dropdown button. I found out how to access the first caption and its dropdown but couldn't work out how to access any of the others. I hadn't clocked that my captions couldn't be an id (as multiple of them), and that I needed to use a loop.
 
 **Original code:**
 ```javascript
